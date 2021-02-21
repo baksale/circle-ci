@@ -9,4 +9,7 @@ jobs:
       - checkout
       - run: java -version
       - run: mvn -version
-      - run: chrome -version
+      - run: which browsers
+      - run: which chrome
+      - run: which google-chrome
+      - run: googgle-chrome -version
