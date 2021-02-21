@@ -1,14 +1,12 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1
+
+# Define the jobs we want to run for this project
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '10.4'
+    docker:
+      - image: cimg/openjdk:8.0-browsers
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-      - run: npm run test
+      - run: java -version
+      - run: mvn -version
+      - run: chrome -version
