@@ -9,4 +9,4 @@ jobs:
       - checkout
       - run: java -version
       - run: mvn -version
-      - run: googgle-chrome -version
+      - run: google-chrome -version
